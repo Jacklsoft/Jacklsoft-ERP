@@ -1,14 +1,6 @@
 /**
  * Created by manga_000 on 21/11/2015.
  */
-var db = require('mongoose');
-
-db.connect('localhost', 'jacklsoft-erp', 27017, {
-    user: 'root',
-    pass: 'Saelurznagam1',
-    auth: {
-        authdb: 'admin'
-    }
-});
+var db = require('cassandra-driver').Client({contactPoints: ['127.0.0.1:9042'], keyspace: 'JacklsoftERP'});
 
 module.exports = db;

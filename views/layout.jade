@@ -2,6 +2,30 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+
+    link(rel='stylesheet' href='https://bootswatch.com/lumen/bootstrap.min.css')
+    script(src='/bower/angular/angular.min.js')
+    script(src='/bower/angular-animate/angular-animate.min.js')
+    script(src='/bower/angular-bootstrap/ui-bootstrap.min.js')
+    script(src='/bower/angular-bootstrap/ui-bootstrap-tpls.min.js')
+    script(src='/angular/ngJacklsoft.js')
+    script(src='/angular/app.js')
+    block scripts
+  body(ng-app='angularJERP' ng-controller= mainController)
+    nav.navbar.navbar-default
+      div.container-fluid
+        div.navbar-header
+          button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#mainNavbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        div#mainNavbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.dropdown(dropdown)
+              a.dropdown-toggle(href dropdown-toggle data-toggle='dropdown') Contabilidad
+              ul.dropdown-menu
+                li: a(href='/asientos/index') Asientos
+    div.container-fluid
+      block header
+      block sidebar
+      block content
