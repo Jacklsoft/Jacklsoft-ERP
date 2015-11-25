@@ -6,12 +6,13 @@ html
     link(rel='stylesheet' href='https://bootswatch.com/lumen/bootstrap.min.css')
     script(src='/bower/angular/angular.min.js')
     script(src='/bower/angular-animate/angular-animate.min.js')
+    script(src='/bower/angular-filter/dist/angular-filter.min.js')
     script(src='/bower/angular-bootstrap/ui-bootstrap.min.js')
     script(src='/bower/angular-bootstrap/ui-bootstrap-tpls.min.js')
     script(src='/angular/ngJacklsoft.js')
     script(src='/angular/app.js')
     block scripts
-  body(ng-app='angularJERP' ng-controller= mainController)
+  body(ng-app='angularJERP')
     nav.navbar.navbar-default
       div.container-fluid
         div.navbar-header
@@ -24,7 +25,7 @@ html
             li.dropdown(dropdown)
               a.dropdown-toggle(href dropdown-toggle data-toggle='dropdown') Contabilidad
               ul.dropdown-menu
-                li: a(href='/asientos/index') Asientos
+                li: a(href='/asientos/index') Libro Mayor
     div.container-fluid
       block header
       block sidebar

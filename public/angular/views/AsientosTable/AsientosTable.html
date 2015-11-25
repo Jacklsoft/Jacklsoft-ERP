@@ -2,9 +2,19 @@
     <thead>
         <tr>
             <th>Asiento</th>
-            <th>ID</th>
+            <th>Cuenta</th>
             <th>Debe</th>
             <th>Haber</th>
         </tr>
     </thead>
+    <tbody ng-repeat="(key, value) in data | groupBy: 'asiento'">
+        <tr>
+            <th rowspan="{{value.length+1}}"><span class="label label-info">{{$index+1}}</span></th>
+        </tr>
+        <tr ng-repeat="row in value">
+            <td>{{row.cuenta}}</td>
+            <td>{{row.debe}}</td>
+            <td>{{row.haber}}</td>
+        </tr>
+    </tbody>
 </table>

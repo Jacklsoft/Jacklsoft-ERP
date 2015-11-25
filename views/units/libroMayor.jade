@@ -1,0 +1,14 @@
+//
+   Created by manga_000 on 23/11/2015.
+
+extends ../layout
+
+block scripts
+    script(src='/angular/views/AsientosTable/AsientosTable.js')
+
+block header
+    div.page-header
+        h1 Libro Mayor
+
+block content
+    div.col-md-8(jerp-asientos-table)
