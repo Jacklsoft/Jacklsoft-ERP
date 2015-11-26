@@ -1,7 +1,7 @@
 /**
  * Created by leonardo.mangano on 11/11/2015.
  */
-var ngJacklsoft = angular.module('ngJacklsoft', ['ui.bootstrap', 'ngAnimate', 'angular.filter']);
+var ngJacklsoft = angular.module('ngJacklsoft', ['ui.bootstrap', 'ngAnimate']);
 
 ngJacklsoft.directive('jklDateModel', function(){
     return {

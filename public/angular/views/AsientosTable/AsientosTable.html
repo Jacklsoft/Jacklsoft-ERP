@@ -7,14 +7,14 @@
             <th>Haber</th>
         </tr>
     </thead>
-    <tbody ng-repeat="(key, value) in data | groupBy: 'asiento'">
+    <tbody ng-repeat="asiento in data">
         <tr>
-            <th rowspan="{{value.length+1}}"><span class="label label-info">{{$index+1}}</span></th>
+            <th rowspan="{{asiento.items.length+1}}"><span class="label label-info">{{$index+1}}</span></th>
         </tr>
-        <tr ng-repeat="row in value">
-            <td>{{row.cuenta}}</td>
-            <td>{{row.debe}}</td>
-            <td>{{row.haber}}</td>
+        <tr ng-repeat="row in asiento.items">
+            <td>{{row.cue}}</td>
+            <td>{{row.deb}}</td>
+            <td>{{row.hab}}</td>
         </tr>
     </tbody>
 </table>
