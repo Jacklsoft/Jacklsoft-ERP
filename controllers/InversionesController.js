@@ -8,4 +8,8 @@ router.get('/index', function(req, res){
     return res.render('units/inversiones');
 });
 
+router.post('/', function(req, res){
+    var doc = res.body;
+});
+
 module.exports = router;
