@@ -22,9 +22,9 @@ html
             span.icon-bar
         div#mainNavbar.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.dropdown(dropdown)
-              a.dropdown-toggle(href dropdown-toggle data-toggle='dropdown') Contabilidad
-              ul.dropdown-menu
+            li(uib-dropdown)
+              a(href uib-dropdown-toggle) Contabilidad
+              ul(uib-dropdown-menu)
                 li: a(href='/asientos/index') Libro Mayor
                 li: a(href='/inversiones/index') Inversiones
     div.container-fluid
