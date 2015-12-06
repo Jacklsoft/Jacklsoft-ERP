@@ -10,6 +10,7 @@ var users = require('./routes/users');
 
 var asientos = require('./controllers/AsientosController');
 var inversiones = require('./controllers/InversionesController');
+var planCuentas = require('./controllers/PlanCuentasController');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/asientos', asientos);
 app.use('/inversiones', inversiones);
+app.use('/plan_cuentas', planCuentas);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
